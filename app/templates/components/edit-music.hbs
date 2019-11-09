@@ -1,0 +1,33 @@
+<h3>Edit music page</h3>
+{{#if showError}}
+  <div class="alert alert-danger" role="alert">
+    Please enter all fields value.
+  </div>
+{{/if}}
+<form>
+  <div class="form-group">
+    <label for="artistName">Artist name</label>
+    {{input type="text" id="artistName" name="artistName" class="form-control music-album__field-size" value=model.artistName}}
+  </div>
+  <div class="form-group">
+    <label for="albumName">Album name</label>
+    {{input type="text" id="albumName" name="albumName" class="form-control music-album__field-size" value=model.albumName}}
+  </div>
+  <div class="form-group">
+    <label for="genres">Genre's</label>
+    {{input type="text" id="genres" name="genres" class="form-control music-album__field-size" value=model.genres}}
+  </div>
+  <div class="form-group">
+    <label for="albumCover">Album cover</label>
+    {{input type="text" id="albumCover" name="albumCover" class="form-control music-album__field-size" value=model.albumCover}}
+  </div>  
+  <div class="form-group">
+    <label for="year">Year</label>
+    {{input type="text" id="year" class="form-control music-album__field-size" name="year" value=model.year}}
+  </div>
+  <div class="form-group">
+    <label for="spotifyLink">Spotify link</label>
+    {{input type="text" id="spotifyLink" name="spotifyLink" class="form-control music-album__field-size" value=model.spotifyLink}}
+  </div>
+  <button type="submit" class="btn btn-primary" data-test="updateMusic" {{action "updateMusic" model}}>Submit</button>
+</form>

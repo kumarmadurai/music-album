@@ -1,0 +1,13 @@
+
+@import "ember-bootstrap/bootstrap";
+
+.music-album {
+
+    &__content {
+       width: 80%;
+    }
+    &__field-size {
+        width: 50%;
+    }
+
+}

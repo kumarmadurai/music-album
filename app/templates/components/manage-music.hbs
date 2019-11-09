@@ -1,0 +1,27 @@
+<h2>Manage music album</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Artist name</th>
+      <th scope="col">Album name</th>
+      <th scope="col">Genres</th>
+      <th scope="col">Album cover</th>
+      <th scope="col">Year of release</th>
+      <th scope="col">Spotify link</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody >
+    {{#each model as |music|}}
+      <tr data-test="music-album">
+        <td>{{#link-to "view" music.id}}{{music.artistName}}{{/link-to}}</td>
+        <td>{{music.albumName}}</td>
+        <td>{{music.genres}}</td>
+        <td>{{music.albumCover}}</td>
+        <td>{{music.year}}</td>
+        <td>{{music.spotifyLink}}</td>
+        <td>{{#link-to "edit" music.id}}Edit{{/link-to}}</td> 
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
